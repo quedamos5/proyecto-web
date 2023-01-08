@@ -1,0 +1,66 @@
+/* - Color primario: #051923 
+- Color secundario: #BFDBF7
+- Color de acento: #006494 */
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #BFDBF7;
+    min-height: 100vh;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: #051923;
+    
+}
+
+#title {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 6vh;
+    position: relative;
+    top: 3.5vh;
+    left: 5vh;
+}
+
+.body {
+    height: 70vh;
+    position: relative;
+    top: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#floatBox{
+    border: 6px solid white;
+    width: 900px;
+    height: 500px;
+    background-color: #006494;
+    z-index: -1;
+    
+}
+
+.footer {
+    position: fixed;
+    left: 50%;
+    bottom: -20px;
+    width: 140vh;
+    height: 4vh;
+    background-color: #051923;
+    color: white;
+    transform: translate(-50%, -50%);
+    
+}
+
