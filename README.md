@@ -1,5 +1,5 @@
 # Sprint 1
-- Andrés &rarr; Estructura html de las 11 páginas y una hoja de style.css común para los siguientes
+- Andrés &rarr; Estructura html de las 11 páginas y una hoja de style.css común para los siguientes.
 
 ## Paleta de colores
 - Color primario: `#051923`
