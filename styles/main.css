@@ -47,19 +47,21 @@ video {
 .body {
     height: 70vh;
     position: relative;
-    top: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
+}
+
+#slider {
+    background-color: #006494;
+    opacity: 80%;
+    height: 100%;
 }
 
 #floatBox{
     border: 6px solid white;
-    width: 900px;
-    height: 500px;
-    background-color: #006494;
     z-index: -1;
-    
+    border-radius: 35%;
+    overflow: hidden;
+    margin-top: 30vh;
 }
 
 .footer {
