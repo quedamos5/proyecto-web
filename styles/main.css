@@ -1,22 +1,31 @@
 /* - Color primario: #051923 
 - Color secundario: #BFDBF7
 - Color de acento: #006494 */
+
+
 *{
-    margin: 0;
+    margin: 0;  
     padding: 0;
-    
 }
+
 html, body {
     width: 100%;
     height: 100%;
 }
+.carousel-caption{
+    background-color: rgba(0, 0, 0, 0.5);
+    font-family: "Agency FB";
+    font-weight: 900;
+    border-radius: 35%;
+}
+
 
 body {
     background-color: #BFDBF7;
     min-height: 100vh;
 }
 
-video {
+#fondo {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -30,9 +39,11 @@ video {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 15vh;
+    height: 13vh;
     background-color: #051923;
-    
+}
+#logo {
+    width: 30vh;
 }
 
 #title {
@@ -52,9 +63,9 @@ video {
 
 #slider {
     background-color: #006494;
-    opacity: 80%;
     height: 100%;
 }
+
 
 #floatBox{
     border: 6px solid white;
@@ -72,7 +83,9 @@ video {
     height: 4vh;
     background-color: #051923;
     color: white;
-    transform: translate(-50%, -50%);
-    
+    transform: translate(-50%, -50%); 
 }
-
+.videopj {
+    width: auto;
+    height: auto;
+}
