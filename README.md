@@ -10,6 +10,7 @@
 # Sprint 3
 - Edu &rarr; Conseguir icono de Warframe, tipografía y retrato de los 10 personajes.
 # Sprint 4
+- Antonio &rarr; Crear layout para index y personajes con bootstrap. Estructurar páginas.
 ## Scrum
 [Enlace Trello](https://trello.com/b/19iF0Ymg/proyectoets)
 
