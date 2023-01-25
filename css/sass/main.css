@@ -21,13 +21,19 @@ body .row:nth-child(2) {
 }
 
 .carousel {
-  height: 60vh;
+  height: 30.4vw;
   border: 6px solid white;
   border-radius: 35%;
   overflow: hidden;
 }
+.carousel a {
+  display: flex;
+  justify-content: center;
+  height: 30.2vw;
+  width: 100%;
+}
 .carousel video {
-  height: 59vh;
+  height: 35vw;
 }
 .carousel button {
   background-color: rgba(187, 187, 187, 0.1647058824);
@@ -50,4 +56,32 @@ body .row:nth-child(2) {
 }
 .carousel-caption p {
   font-weight: 900;
+}
+
+@media screen and (max-width: 1300px) {
+  .col-2, p {
+    display: none;
+  }
+  .col-8 {
+    width: 100%;
+    padding: 10px 5% 10px 5%;
+  }
+  .carousel {
+    height: 40vw;
+  }
+  .carousel a {
+    height: 40.2vw;
+  }
+  .carousel h2 {
+    margin-bottom: 20px;
+  }
+  .carousel video {
+    height: 45.4vw;
+  }
+  .carousel button[class*=prev] {
+    margin-left: -15px;
+  }
+  .carousel button[class*=next] {
+    margin-right: -15px;
+  }
 }/*# sourceMappingURL=main.css.map */
