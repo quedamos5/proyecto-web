@@ -94,16 +94,17 @@ body .row:nth-child(2) {
     max-width: 10vw;
   }
   .carousel {
-    height: 30vw;
+    height: 37.5vw;
   }
   .carousel a {
-    height: 30.2vw;
+    height: 37.7vw;
   }
   .carousel h2 {
     margin-bottom: 20px;
   }
   .carousel video {
     height: 45.4vw;
+    margin-top: -5%;
   }
   .carousel button[class*=prev] {
     margin-left: -15px;
