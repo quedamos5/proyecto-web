@@ -1,65 +1,61 @@
 @import variables
 
-*
-    margin: 0
-    padding: 0
-
-html, body
-    height: 100%
+body
+    height: 100vh
     
     background-color: $secondary
 
-video
-    position: absolute
-    right: 0
-    bottom: 0
+    > video
+        position: absolute
+        right: 0
+        bottom: 0
 
-    z-index: 0
-
-.container-fluid
-    position: relative
-    z-index: 1
-
-.container-fluid
-    height: calc(100vh)
-
-.row:nth-child(2)
-    height: calc(100vh - 106.34px)
+    .row:nth-child(2)
+        height: calc(100vh - 137.72px)
 
 #header
+    position: relative
+
+    z-index: 10
+
     padding: 10px 100px
 
-    #logo
+    img
         max-width: 15vw
 
-#floatBox
+
+.carousel
+    height: 60vh
+
     border: 6px solid white
     border-radius: 35%
 
+    overflow: hidden
+
+    video
+        height: 59vh
+
+    button
+        background-color: #bbbbbb2a
+
+        border-radius: 45%
+
+    button[class*=prev]
+            margin-left: -30px
+
+    button[class*=next]
+            margin-right: -30px
+            
+
 .carousel-caption
-    background-color: rgba(0, 0, 0, 0.5)
     font-family: "Agency FB"
-    font-weight: 900
-    border-radius: 35%
+    text-transform: uppercase
 
-#title 
-    color: white
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-    font-size: 6vh
-    position: relative
-    top: 3.5vh
-    left: 5vh
+    background-color: rgba(0, 0, 0, 0.5)
+    border-top-left-radius: 35%
+    border-top-right-radius: 35%
 
-#slider 
-    background-color: $accent
-    height: 100%
+    margin-bottom: -12px
 
-.footer 
-    position: fixed
-    left: 50%
-    bottom: -20px
-    width: 140vh
-    height: 4vh
-    background-color: $primary
-    color: white
-    transform: translate(-50%, -50%)
+    p
+        font-weight: 900
