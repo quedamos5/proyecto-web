@@ -1,6 +1,7 @@
 body {
   height: 100vh;
   background-color: #BFDBF7;
+  overflow: hidden;
 }
 body > video {
   position: absolute;
@@ -71,6 +72,32 @@ body .row:nth-child(2) {
   }
   .carousel a {
     height: 40.2vw;
+  }
+  .carousel h2 {
+    margin-bottom: 20px;
+  }
+  .carousel video {
+    height: 45.4vw;
+  }
+  .carousel button[class*=prev] {
+    margin-left: -15px;
+  }
+  .carousel button[class*=next] {
+    margin-right: -15px;
+  }
+}
+@media screen and (max-height: 600px) {
+  #header {
+    padding: 10px;
+  }
+  #header img {
+    max-width: 10vw;
+  }
+  .carousel {
+    height: 30vw;
+  }
+  .carousel a {
+    height: 30.2vw;
   }
   .carousel h2 {
     margin-bottom: 20px;
