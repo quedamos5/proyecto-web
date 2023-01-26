@@ -9,7 +9,7 @@
 
     .carousel
         height: 40vw
-        
+
         a
             height: 40.2vw
         h2 
@@ -24,25 +24,65 @@
         button[class*=next]
                 margin-right: -15px
 
-@media screen and (max-height: 600px) //Dispositivos apaisados
-    #header img
-            max-width: 10vw
-
+@media screen and (max-width: 600px) //Pantallas móviles
     .carousel
-        height: 37.5vw
+        height: 90vw
+        
+        border-radius: 10%
         
         a
-            height: 37.7vw
+            height: 90.2vw
         h2 
             margin-bottom: 20px
 
         video
-            height: 45.4vw
+            height: 88.4vw
+
+@media screen and (max-height: 600px) //Dispositivos apaisados
+    body > video
+        display: none
+
+    #header img
+            max-width: 10vw
+
+    .container-fluid .row:nth-child(2)
+        position: fixed
+        top: 0
+        right: 0
+        left: 0
+        height: 100vh
+
+        .col-8
+            padding: 0
+
+
+    .carousel
+        height: 100vh
+        
+        border: none
+        border-radius: 0
+
+        a
+            height: 100vh
+        h2 
+            margin-bottom: 40px
+
+        video
+            height: 115.4%
 
             margin-top: -5%    
 
         button[class*=prev]
-                margin-left: -15px
+            margin-left: -65px
+
+            > span
+                margin-right: -60px
 
         button[class*=next]
-                margin-right: -15px
+            margin-right: -65px
+
+            > span
+                margin-left: -60px
+
+    .carousel-caption
+        bottom: 0
