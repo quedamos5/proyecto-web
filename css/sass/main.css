@@ -29,10 +29,8 @@ video {
   border-radius: 15%;
   overflow: hidden;
 }
-.carousel video {
-  max-width: 100%;
-}
 .carousel .carousel-indicators {
+  max-height: 30px;
   margin-bottom: 0;
 }
 .carousel .carousel-caption {
@@ -58,6 +56,9 @@ video {
   height: 100%;
   width: 100%;
 }
+.carousel a video {
+  max-width: 100%;
+}
 .carousel button {
   background-color: rgba(187, 187, 187, 0.1647058824);
   border-radius: 45%;
@@ -82,6 +83,11 @@ video {
   top: -40px;
   left: -20px;
 }
+.card-header img::before {
+  height: 400px;
+  width: 400px;
+  background-color: black;
+}
 
 .card-body {
   background-color: #BFDBF7;
@@ -93,6 +99,18 @@ video {
   }
   .carousel h2 {
     margin-bottom: 20px;
+  }
+  .carousel button[class*=prev] {
+    margin-left: -100px;
+  }
+  .carousel button[class*=prev] > span {
+    margin-right: -60px;
+  }
+  .carousel button[class*=next] {
+    margin-right: -100px;
+  }
+  .carousel button[class*=next] > span {
+    margin-left: -60px;
   }
 }
 @media screen and (max-width: 1300px) {
@@ -106,7 +124,7 @@ video {
   .carousel {
     height: 50vw;
   }
-  .carousel video {
+  .carousel a video {
     max-width: 120%;
   }
   .carousel h2 {
@@ -124,7 +142,7 @@ video {
     height: 80vw;
     border-radius: 10%;
   }
-  .carousel video {
+  .carousel a video {
     max-width: 185%;
   }
   .carousel h2 {
