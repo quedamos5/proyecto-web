@@ -98,6 +98,9 @@ video {
 .card-body img {
   background-color: rgb(158, 158, 158);
 }
+.card-body p {
+  padding-right: 10px;
+}
 
 blockquote {
   position: relative;
@@ -138,6 +141,16 @@ blockquote a {
 }
 .row > a:hover {
   background-color: rgb(0, 0, 0);
+}
+
+#character {
+  position: relative;
+  z-index: 1;
+}
+
+#prime {
+  max-height: 350px;
+  overflow: hidden;
 }
 
 #pre {
