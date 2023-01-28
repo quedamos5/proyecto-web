@@ -85,8 +85,11 @@ video {
   align-items: center;
   z-index: 1;
   position: absolute;
-  top: -40px;
+  top: -50px;
   left: -20px;
+}
+.card-header h1 {
+  margin-left: 60px;
 }
 
 .card-body {
@@ -118,9 +121,8 @@ blockquote a {
   align-items: center;
   z-index: 1;
   position: fixed;
-  right: 4vw;
   top: 40%;
-  width: 180px;
+  width: 9vw;
   flex-direction: column;
   color: #BFDBF7;
   font-size: 30px;
@@ -136,6 +138,14 @@ blockquote a {
 }
 .row > a:hover {
   background-color: rgb(0, 0, 0);
+}
+
+#pre {
+  left: 4vw;
+}
+
+#sig {
+  right: 4vw;
 }
 
 .clear {
