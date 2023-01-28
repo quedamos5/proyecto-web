@@ -3,11 +3,6 @@ body {
   background-color: #BFDBF7;
   overflow: hidden;
 }
-body > video {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
 body .row:nth-child(2) {
   height: calc(100vh - 137.72px);
 }
@@ -21,20 +16,47 @@ body .row:nth-child(2) {
   max-width: 15vw;
 }
 
+video {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+}
+
 .carousel {
   height: 30.4vw;
+  box-shadow: 10px 10px 20px #006494;
   border: 6px solid white;
   border-radius: 15%;
   overflow: hidden;
 }
+.carousel video {
+  max-width: 100%;
+}
+.carousel .carousel-indicators {
+  margin-bottom: 0;
+}
+.carousel .carousel-caption {
+  bottom: 0;
+  font-family: "Agency FB";
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 35%;
+  border-top-right-radius: 35%;
+  padding-bottom: 1rem;
+}
+.carousel .carousel-caption p {
+  font-weight: 900;
+}
+.carousel div:not(.carousel-caption) {
+  height: 100%;
+}
 .carousel a {
+  position: relative;
   display: flex;
   justify-content: center;
-  height: 30.2vw;
+  align-items: center;
+  height: 100%;
   width: 100%;
-}
-.carousel video {
-  height: 35vw;
 }
 .carousel button {
   background-color: rgba(187, 187, 187, 0.1647058824);
@@ -45,18 +67,6 @@ body .row:nth-child(2) {
 }
 .carousel button[class*=next] {
   margin-right: -30px;
-}
-
-.carousel-caption {
-  font-family: "Agency FB";
-  text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-top-left-radius: 35%;
-  border-top-right-radius: 35%;
-  margin-bottom: -12px;
-}
-.carousel-caption p {
-  font-weight: 900;
 }
 
 .card {
@@ -77,6 +87,14 @@ body .row:nth-child(2) {
   background-color: #BFDBF7;
 }
 
+@media screen and (min-width: 2800px) {
+  .carousel {
+    height: 25vw;
+  }
+  .carousel h2 {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (max-width: 1300px) {
   .col-2, p {
     display: none;
@@ -86,16 +104,13 @@ body .row:nth-child(2) {
     padding: 10px 5% 10px 5%;
   }
   .carousel {
-    height: 40vw;
+    height: 50vw;
   }
-  .carousel a {
-    height: 40.2vw;
+  .carousel video {
+    max-width: 120%;
   }
   .carousel h2 {
     margin-bottom: 20px;
-  }
-  .carousel video {
-    height: 45.4vw;
   }
   .carousel button[class*=prev] {
     margin-left: -15px;
@@ -104,19 +119,16 @@ body .row:nth-child(2) {
     margin-right: -15px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
   .carousel {
-    height: 90vw;
+    height: 80vw;
     border-radius: 10%;
   }
-  .carousel a {
-    height: 90.2vw;
+  .carousel video {
+    max-width: 185%;
   }
   .carousel h2 {
     margin-bottom: 20px;
-  }
-  .carousel video {
-    height: 88.4vw;
   }
 }
 @media screen and (max-height: 600px) {
@@ -132,6 +144,7 @@ body .row:nth-child(2) {
     right: 0;
     left: 0;
     height: 100vh;
+    padding-top: 0 !important;
   }
   .container-fluid .row:nth-child(2) .col-8 {
     padding: 0;
@@ -141,15 +154,8 @@ body .row:nth-child(2) {
     border: none;
     border-radius: 0;
   }
-  .carousel a {
-    height: 100vh;
-  }
   .carousel h2 {
     margin-bottom: 40px;
-  }
-  .carousel video {
-    height: 115.4%;
-    margin-top: -5%;
   }
   .carousel button[class*=prev] {
     margin-left: -65px;
