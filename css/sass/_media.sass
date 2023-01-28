@@ -1,3 +1,10 @@
+@media screen and (min-width: 2800px) //Pantallas ultrawide
+    .carousel
+        height: 25vw
+        
+        h2 
+            margin-bottom: 20px
+    
 @media screen and (max-width: 1300px) //Pantallas pequeñas
     .col-2, p
         display: none
@@ -8,15 +15,13 @@
         padding: 10px 5% 10px 5%
 
     .carousel
-        height: 40vw
-
-        a
-            height: 40.2vw
-        h2 
-            margin-bottom: 20px
+        height: 50vw
 
         video
-            height: 45.4vw    
+            max-width: 120%
+
+        h2 
+            margin-bottom: 20px
 
         button[class*=prev]
                 margin-left: -15px
@@ -24,19 +29,17 @@
         button[class*=next]
                 margin-right: -15px
 
-@media screen and (max-width: 600px) //Pantallas móviles
+@media screen and (max-width: 900px) //Pantallas móviles
     .carousel
-        height: 90vw
+        height: 80vw
         
         border-radius: 10%
-        
-        a
-            height: 90.2vw
-        h2 
-            margin-bottom: 20px
 
         video
-            height: 88.4vw
+            max-width: 185%
+        
+        h2 
+            margin-bottom: 20px
 
 @media screen and (max-height: 600px) //Dispositivos apaisados
     body > video
@@ -52,6 +55,8 @@
         left: 0
         height: 100vh
 
+        padding-top: 0 !important
+
         .col-8
             padding: 0
 
@@ -62,15 +67,8 @@
         border: none
         border-radius: 0
 
-        a
-            height: 100vh
         h2 
-            margin-bottom: 40px
-
-        video
-            height: 115.4%
-
-            margin-top: -5%    
+            margin-bottom: 40px   
 
         button[class*=prev]
             margin-left: -65px

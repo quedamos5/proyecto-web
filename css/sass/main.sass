@@ -2,18 +2,13 @@
 
 body
     height: 100vh //Ocupar el 100% de la pantalla
-    
+
     background-color: $secondary
 
     overflow: hidden //Evitar el overflow producido por el video (carrusel) en modo apaisado
 
-    > video //Video de fondo - Marcadores para que ocupe la pantalla completa
-        position: absolute
-        right: 0
-        bottom: 0
-
     .row:nth-child(2)
-        height: calc(100vh - 137.72px) 
+        height: calc(100vh - 137.72px)
         //Hacemos que el row que contiene el slider ocupe el espacio restante de pantalla
 
 #header
@@ -26,26 +21,53 @@ body
     img
         max-width: 15vw //Tamaño de la imagen relativo al ancho de la pantalla
 
+video //Videos a pantalla completa
+    position: absolute
+
+    min-width: 100%
+    min-height: 100%
 
 .carousel
     height: 30.4vw //Establecemos el alto deseado
 
+    box-shadow: 10px 10px 20px $accent
     border: 6px solid white
     border-radius: 15%
 
     overflow: hidden
 
-    a
-        display: flex //necesario para la siguiente línea
-        justify-content: center //Colocamos su contenido en el centro vertical del enlace
-
-        height: 30.2vw //Damos alto para ajustar su contenido
-        width: 100%
-
     video
-        height: 35vw 
-        //El alto define el tamaño del video 
-        //Lo hacemos mas grande que el contenedor para que no se descente en pantallas más pequeñas
+        max-width: 100%
+
+    .carousel-indicators
+        margin-bottom: 0
+
+    .carousel-caption
+        bottom: 0
+        
+        font-family: "Agency FB"
+        text-transform: uppercase
+
+        background-color: rgba(0, 0, 0, 0.5)
+        border-top-left-radius: 35%
+        border-top-right-radius: 35%
+
+        padding-bottom: 1rem
+
+        p
+            font-weight: 900
+
+    div:not(.carousel-caption)
+        height: 100%
+
+    a
+        position: relative
+        display: flex //necesario para la siguiente línea
+        justify-content: center //Colocamos su contenido en el centro horizontal del enlace
+        align-items: center //Colocamos su contenido en el centro vertical del enlace
+
+        height: 100%//Damos alto para ajustar su contenido
+        width: 100%
 
     button
         background-color: #bbbbbb2a
@@ -53,29 +75,15 @@ body
         border-radius: 45%
 
     button[class*=prev]
-            margin-left: -30px //Lo sacamos un poco del padre para que ocupe menos
+        margin-left: -30px //Lo sacamos un poco del padre para que ocupe menos
 
     button[class*=next]
-            margin-right: -30px //Lo sacamos un poco del padre para que ocupe menos
-            
-
-.carousel-caption
-    font-family: "Agency FB"
-    text-transform: uppercase
-
-    background-color: rgba(0, 0, 0, 0.5)
-    border-top-left-radius: 35%
-    border-top-right-radius: 35%
-
-    margin-bottom: -12px //Lo bajamos un poco para evitar fallos visuales
-
-    p
-        font-weight: 900
+        margin-right: -30px //Lo sacamos un poco del padre para que ocupe menos
 
 .card
     border: none
 
-.card-header 
+.card-header
     background-color: $primary
     color: $accent
 
