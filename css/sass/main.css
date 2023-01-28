@@ -1,7 +1,6 @@
 body {
   height: 100vh;
   background-color: #BFDBF7;
-  overflow: hidden;
 }
 body .row:nth-child(2) {
   height: calc(100vh - 137.72px);
@@ -17,7 +16,7 @@ body .row:nth-child(2) {
 }
 
 video {
-  position: absolute;
+  position: fixed;
   min-width: 100%;
   min-height: 100%;
 }
@@ -34,16 +33,14 @@ video {
   margin-bottom: 0;
 }
 .carousel .carousel-caption {
-  bottom: 0;
   font-family: "Agency FB";
+  font-weight: bolder;
   text-transform: uppercase;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   border-top-left-radius: 35%;
   border-top-right-radius: 35%;
   padding-bottom: 1rem;
-}
-.carousel .carousel-caption p {
-  font-weight: 900;
 }
 .carousel div:not(.carousel-caption) {
   height: 100%;
@@ -57,6 +54,7 @@ video {
   width: 100%;
 }
 .carousel a video {
+  position: absolute;
   max-width: 100%;
 }
 .carousel button {
@@ -75,22 +73,73 @@ video {
 }
 
 .card-header {
+  font-family: "Agency FB";
+  font-weight: bolder;
+  text-transform: uppercase;
   background-color: #051923;
   color: #006494;
 }
 .card-header img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
   position: absolute;
   top: -40px;
   left: -20px;
 }
-.card-header img::before {
-  height: 400px;
-  width: 400px;
-  background-color: black;
-}
 
 .card-body {
-  background-color: #BFDBF7;
+  background-color: rgba(158, 158, 158, 0.281);
+}
+.card-body img {
+  background-color: rgb(158, 158, 158);
+}
+
+blockquote {
+  position: relative;
+  font-style: italic;
+  background-color: rgba(158, 158, 158, 0.281);
+  padding: 30px 0px;
+}
+blockquote a {
+  position: absolute;
+  right: 40px;
+  bottom: 10px;
+  text-decoration: none;
+}
+
+.row > a {
+  font-family: "Agency FB";
+  font-weight: bolder;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  right: 4vw;
+  top: 40%;
+  width: 180px;
+  flex-direction: column;
+  color: #BFDBF7;
+  font-size: 30px;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 15px;
+  z-index: 1;
+  transition: all 0.5s;
+}
+.row > a span {
+  margin-top: 15px;
+}
+.row > a:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.clear {
+  clear: both;
 }
 
 @media screen and (min-width: 2800px) {
@@ -115,7 +164,7 @@ video {
 }
 @media screen and (max-width: 1300px) {
   .col-2, p {
-    display: none;
+    display: none !important;
   }
   .col-8 {
     width: 100%;

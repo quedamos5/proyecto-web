@@ -5,7 +5,7 @@ body
 
     background-color: $secondary
 
-    overflow: hidden //Evitar el overflow producido por el video (carrusel) en modo apaisado
+    // overflow: hidden //Evitar el overflow producido por el video (carrusel) en modo apaisado
 
     .row:nth-child(2)
         height: calc(100vh - 137.72px)
@@ -22,7 +22,7 @@ body
         max-width: 15vw //Tamaño de la imagen relativo al ancho de la pantalla
 
 video //Videos a pantalla completa
-    position: absolute
+    position: fixed
 
     min-width: 100%
     min-height: 100%
@@ -42,19 +42,15 @@ video //Videos a pantalla completa
         margin-bottom: 0
 
     .carousel-caption
+        @include fuente
+
         bottom: 0
-        
-        font-family: "Agency FB"
-        text-transform: uppercase
 
         background-color: rgba(0, 0, 0, 0.5)
         border-top-left-radius: 35%
         border-top-right-radius: 35%
 
         padding-bottom: 1rem
-
-        p
-            font-weight: 900
 
     div:not(.carousel-caption)
         height: 100%
@@ -69,6 +65,8 @@ video //Videos a pantalla completa
         width: 100%
 
         video
+            position: absolute
+
             max-width: 100%
 
     button
@@ -86,21 +84,71 @@ video //Videos a pantalla completa
     border: none
 
 .card-header
+    @include fuente
+
     background-color: $primary
     color: $accent
 
     img
+        @include retratos
+
         position: absolute
         top: -40px
         left: -20px
 
-    img::before
-        height: 400px
-        width: 400px
-
-        background-color: black
-
 .card-body
-    background-color: $secondary
+    background-color: rgba(158, 158, 158, 0.281)
+
+    img
+        background-color: rgb(158, 158, 158)    
+
+blockquote
+    position: relative
+
+    font-style: italic
+
+    background-color: rgba(158, 158, 158, 0.281)
+
+    padding: 30px 0px
+
+    a
+        position: absolute
+        right: 40px
+        bottom: 10px
+
+        text-decoration: none
+
+.row > a
+    @include fuente
+    @include retratos
+
+    position: fixed
+    right: 4vw
+    top: 40%
+
+    width: 180px
+
+    flex-direction: column
+
+    color: $secondary
+    font-size: 30px
+    text-decoration: none
+
+    background-color: rgba(0, 0, 0, .7)
+    border-radius: 15px
+
+    padding: 15px
+    z-index: 1
+
+    transition: all .5s
+
+    span
+        margin-top: 15px
+
+    &:hover
+        background-color: rgb(0, 0, 0)
+
+.clear
+    clear: both
 
 @import media
